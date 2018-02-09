@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello Friend!</title>
+    <title>Address Book!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
     <h1>Address Book</h1>
 		<h4>Your Contacts:</h4>
 		<ul>
-
+			@foreach(var item in Model)
+			{
+				<li>Name: @item.GetName() | Phone: @item.GetPhone() | Email: @item.GetEmail() </li>
+			}
 		</ul>
-		<p><a href='/contacts/add'>Add a new contact</a>  |  <a href='/contacts/clear'>Clear all contacts</a></p>
+		<p><a href='/add-contact'>Add a new contact</a>  |  <a href='/contacts/clear'>Clear all contacts</a></p>
   </body>
 </html>

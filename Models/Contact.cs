@@ -6,13 +6,13 @@ namespace AddressBook.Models
   public class Contact
 		{
 			private string _name;
-			private int _phone;
+			private string _phone;
 			private string _email;
 			public int _id;
 
 			private static List<Contact> _instances = new List<Contact> {};
 
-			public Contact (string name, int phone, string email)
+			public Contact (string name, string phone, string email)
 			{
 				_name = name;
 				_phone = phone;
@@ -29,7 +29,7 @@ namespace AddressBook.Models
 			{
 				return _name;
 			}
-			public int GetPhone()
+			public string GetPhone()
 			{
 				return _phone;
 			}
@@ -46,7 +46,7 @@ namespace AddressBook.Models
 			{
 				_name = newName;
 			}
-			public void SetPhone(int newPhone)
+			public void SetPhone(string newPhone)
 			{
 				_phone = newPhone;
 			}

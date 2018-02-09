@@ -10,7 +10,20 @@ namespace AddressBook.Controllers
         [HttpGet("/")]
         public ActionResult Index()
         {
-            return View();
+						List<Contact> allContacts = Contact.GetAll();
+            return View(allContacts);
         }
+				[HttpGet("/add-contact")]
+				public ActionResult ContactForm()
+				{
+						return View();
+				}
+				[HttpPost("/")]
+				public ActionResult AddContact()
+				{
+						Contact newContact = new Contact (Request.Form["name"], (Request.Form["phone"]), Request.Form["email"]);
+						List<Contact> allContacts = Contact.GetAll();
+						return View("Index", allContacts);
+				}
 		}
 }
