@@ -1,0 +1,9 @@
+C:\Users\dillo\Desktop\address-book\bin\Debug\netcoreapp1.1\AddressBook.deps.json
+C:\Users\dillo\Desktop\address-book\bin\Debug\netcoreapp1.1\AddressBook.runtimeconfig.json
+C:\Users\dillo\Desktop\address-book\bin\Debug\netcoreapp1.1\AddressBook.runtimeconfig.dev.json
+C:\Users\dillo\Desktop\address-book\obj\Debug\netcoreapp1.1\AddressBook.csproj.CoreCompileInputs.cache
+C:\Users\dillo\Desktop\address-book\obj\Debug\netcoreapp1.1\AddressBook.AssemblyInfo.cs
+C:\Users\dillo\Desktop\address-book\bin\Debug\netcoreapp1.1\AddressBook.dll
+C:\Users\dillo\Desktop\address-book\bin\Debug\netcoreapp1.1\AddressBook.pdb
+C:\Users\dillo\Desktop\address-book\obj\Debug\netcoreapp1.1\AddressBook.dll
+C:\Users\dillo\Desktop\address-book\obj\Debug\netcoreapp1.1\AddressBook.pdb
