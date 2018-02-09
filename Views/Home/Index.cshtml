@@ -6,15 +6,16 @@
   </head>
   <body>
 		<div class="container">
-	    <h1>Address Book</h1>
-			<h4>Your Contacts:</h4>
+	    <h1>Your Contacts</h1>
 			<form action="/add-contact">
 					<button type="submit" class="btn btn-success">Add New Contact</button>
 			</form>
 			<ul>
 				@foreach(var item in Model)
 				{
-					<li>Name: @item.GetName() | Phone: @item.GetPhone() | Email: @item.GetEmail() </li>
+					<h4><a href="/@item.GetId()">@item.GetName()</a></h4>
+					<li><strong>Phone:</strong> @item.GetPhone() | <strong>Email:</strong> @item.GetEmail() </li>
+					<li><strong>Address:</strong>@item.GetAddress().GetStreet(), @item.GetAddress().GetCity(), @item.GetAddress().GetState(), @item.GetAddress().GetZip()</li>
 				}
 			</ul>
 			<form action="/clear-contacts" method="post">

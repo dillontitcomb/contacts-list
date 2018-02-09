@@ -22,9 +22,19 @@ namespace AddressBook.Controllers
 				public ActionResult AddContact()
 				{
 						Contact newContact = new Contact (Request.Form["name"], (Request.Form["phone"]), Request.Form["email"]);
+						Address newAddress = new Address (Request.Form["street"], Request.Form["city"], Request.Form["state"], int.Parse(Request.Form["zip"]));
+						newContact.SetAddress(newAddress);
 						List<Contact> allContacts = Contact.GetAll();
 						return View("Index", allContacts);
 				}
+				[HttpGet("/{id}")]
+				public ActionResult Details(int id)
+				{
+					Contact contact = Contact.Find(id);
+					return View(contact);
+				}
+
+
 				[HttpPost("/clear-contacts")]
 				public ActionResult ClearContacts()
 				{

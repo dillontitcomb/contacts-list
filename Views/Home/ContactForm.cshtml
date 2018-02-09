@@ -5,16 +5,26 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
-    <h1>Address Book</h1>
-		<h4>Add a new contact here:</h4>
-		<form action="/" method="post">
-			<label for="name"></label>
-			<input type="text" name="name" placeholder="input full name here">
-			<label for="phone"></label>
-			<input type="number" name="phone" placeholder="input phone number here">
-			<label for="email"></label>
-			<input type="text" name="email" placeholder="input email here">
-			<button type="submit">Submit Contact!</button>
-		</form>
+		<div class="container">
+	    <h1>Your Contacts</h1>
+			<h4>Add a new contact here:</h4>
+			<form action="/" method="post">
+				<label for="name">Name:</label><br>
+				<input type="text" name="name" placeholder="input full name here"><br>
+				<label for="phone">Phone Number:</label><br>
+				<input type="number" name="phone" placeholder="input phone number here"><br>
+				<label for="email">Email Address:</label><br>
+				<input type="text" name="email" placeholder="input email here"><br>
+				<label for="street">Street Address:</label><br>
+				<input type="text" name="street" placeholder="e.g. johndoe@gmail.com"><br>
+				<label for="city">City:</label><br>
+				<input type="text" name="city" placeholder="e.g. Minneapolis"><br>
+				<label for="state">State:</label><br>
+				<input type="text" name="state" placeholder="e.g. MN"><br>
+				<label for="zip">Zip Code:</label><br>
+				<input type="number" name="zip" placeholder="e.g. 55408"><br>
+				<button type="submit">Submit Contact!</button>
+			</form>
+		</div>
   </body>
 </html>

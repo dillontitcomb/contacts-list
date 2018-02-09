@@ -10,6 +10,8 @@ namespace AddressBook.Models
 			private string _email;
 			public int _id;
 
+			public Address _address;
+
 			private static List<Contact> _instances = new List<Contact> {};
 
 			public Contact (string name, string phone, string email)
@@ -41,6 +43,10 @@ namespace AddressBook.Models
 			{
 				return _id;
 			}
+			public Address GetAddress()
+			{
+				return _address;
+			}
 
 			public void SetName(string newName)
 			{
@@ -53,6 +59,10 @@ namespace AddressBook.Models
 			public void SetEmail(string newEmail)
 			{
 				_email = newEmail;
+			}
+			public void SetAddress(Address newAddress)
+			{
+				_address = newAddress;
 			}
 
 			public static void ClearAll()
