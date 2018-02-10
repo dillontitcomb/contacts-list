@@ -2,20 +2,29 @@
 <html>
   <head>
     <title>Address Book!</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
   </head>
   <body>
 		<div class="container">
-	    <h1>Your Contacts</h1>
-			<form action="/add-contact">
+			<div class="jumbotron">
+				<h1>Your Contacts</h1>
+			</div>
+	    <form action="/add-contact">
 					<button type="submit" class="btn btn-success">Add New Contact</button>
 			</form>
+			<br>
 			<ul>
 				@foreach(var item in Model)
 				{
-					<h4><a href="/@item.GetId()">@item.GetName()</a></h4>
-					<li><strong>Phone:</strong> @item.GetPhone() | <strong>Email:</strong> @item.GetEmail() </li>
-					<li><strong>Address:</strong>@item.GetAddress().GetStreet(), @item.GetAddress().GetCity(), @item.GetAddress().GetState(), @item.GetAddress().GetZip()</li>
+					<div class="card">
+						<div class="card-header">
+							<h3 class="card-title"><a href="/@item.GetId()">@item.GetName()</a></h3>
+							<p><strong>Phone: </strong> @item.GetPhone()</p>
+							<p><strong>Email: </strong> @item.GetEmail()</p>
+							<p><strong>Address: </strong>@item.GetAddress().GetStreet(), @item.GetAddress().GetCity(), @item.GetAddress().GetState(), @item.GetAddress().GetZip()</p>
+							</div>
+					</div>
+					<br>
 				}
 			</ul>
 			<form action="/clear-contacts" method="post">

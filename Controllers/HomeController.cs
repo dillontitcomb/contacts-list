@@ -34,7 +34,6 @@ namespace AddressBook.Controllers
 					return View(contact);
 				}
 
-
 				[HttpPost("/clear-contacts")]
 				public ActionResult ClearContacts()
 				{

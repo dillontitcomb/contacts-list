@@ -16,7 +16,7 @@ _This webpage allows users to store individuals' contact information in an ever-
 * _Program allows user to clear contact list:_
 	* _Example input: *Clear all contacts*_
 	* _Example output: "Add new contact"_
-* _Program allows user click on individuial contact:_
+* _Program allows user to click on an individual contact:_
 	* _Example input: *Clicks "John Doe"*_
 	* _Example output: "John Doe, 612-817-6394, john@gmail.com..."_
 
